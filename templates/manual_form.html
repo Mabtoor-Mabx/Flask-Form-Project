@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Manual Form</h2>
+
+<form method="POST">
+    <label for=""> Name: </label> <br> <br>
+    <input type="text" name="name" id=""> <br> <br>
+    <label for="">  Email: </label> <br> <br>
+    <input type="email" name="email" id=""> <br> <br>
+    <button type="submit">Submit</button>
+</form>
+
+{% if error %}
+<p style="color:blueviolet;">
+    {{error}}
+</p>
+{% endif %}
+
+{% endblock %}
